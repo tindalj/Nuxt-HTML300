@@ -1,12 +1,30 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ['@nuxt/image'],
-  // css: [
-  //   'bootstrap/dist/css/bootstrap.css' // Import Bootstrap CSS
-  // ],
-  // plugins: [
-  //   '~/plugins/bootstrap.js' // Register your Bootstrap plugin
-  // ]
-})
+  app: {
+  head: {
+  title: "Nuxt App",
+  meta: [
+  { charset: "utf-8" },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
+  {
+  hid: "description",
+  name: "description",
+  content: "Meta description",
+  },
+  ],
+  link: [
+  {
+  rel: "stylesheet",
+  href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+  },
+  ],
+  script: [
+  {
+  src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+  defer: true,
+  },
+  ],
+  },
+  },
+  });
